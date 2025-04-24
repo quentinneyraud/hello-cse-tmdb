@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     './extends/core-features/eslint',
     './extends/core-features/typescript',
     './extends/core-features/image',
+    './extends/core-features/vue-use',
     './extends/tmdb',
     './extends/ui',
   ],

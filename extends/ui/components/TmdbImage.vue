@@ -31,9 +31,14 @@ const srcset = computed(() => {
 </script>
 
 <template>
-  <img
-    class="AppImage-image"
-    :src="src"
-    :srcset="srcset"
+  <div
+    class="bg-amber-900 relative"
   >
+    <img
+      class="absolute top-0 left-0 w-full h-full object-center object-cover"
+      loading="lazy"
+      :src="src"
+      :srcset="srcset"
+    >
+  </div>
 </template>

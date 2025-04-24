@@ -10,7 +10,7 @@ export interface Movie {
   adult?: boolean
   backdrop_path?: string
   genre_ids?: number[]
-  id?: number
+  id: number
   original_language?: string
   original_title?: string
   overview?: string
@@ -33,7 +33,7 @@ export interface MovieDetail {
     name?: string
   }[]
   homepage?: string
-  id?: number
+  id: number
   imdb_id?: string
   original_language?: string
   original_title?: string

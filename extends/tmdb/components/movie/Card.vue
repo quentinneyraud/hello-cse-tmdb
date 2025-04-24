@@ -15,10 +15,10 @@ const alt = computed(() => `Poster of ${props.title} movie`)
       },
     }"
   >
-    <div class="w-full aspect-[1500/2200] overflow-hidden">
+    <div class="w-full aspect-[1500/2200] bg-amber-100">
       <TmdbImage
         v-if="props.poster_path"
-        class="object-cover object-center"
+        class="w-full h-full"
         type="poster"
         :alt="alt"
         :tmdb-path="props.poster_path"

@@ -1,15 +1,19 @@
 <script lang="ts" setup>
-const { data: trendingMovies } = useLazyAsyncData('trending', async () => await getTrendingMovies('week', { page: 1 }))
+const query = ref('')
+const queryDebounced = refDebounced(query, 300)
+
+definePageMeta({
+  keepalive: true,
+})
 </script>
 
 <template>
-  <div class="px-5 grid grid-cols-5 gap-x-5 gap-y-10">
-    <MovieCard
-      v-for="movie in trendingMovies?.results"
-      :id="4"
-      :key="movie.id"
-      :poster_path="movie.poster_path"
-      :title="movie.title"
-    />
-  </div>
+  <main>
+    <div class="w-full py-10 pointer-events-none">
+      <UInput v-model="query" type="text" class="pointer-events-auto block w-1/2 mx-auto" size="xl" icon="i-lucide-search" placeholder="Chercher un film" color="neutral" variant="soft" />
+    </div>
+
+    <MovieSearchResultsList v-if="query" :query="queryDebounced" />
+    <MovieTrendingList v-else />
+  </main>
 </template>

@@ -33,7 +33,7 @@ async function loadMore() {
 
 <template>
   <InfiniteList
-    class="px-5 py-10 grid grid-cols-5 gap-x-5 gap-y-10"
+    class="px-5 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-10"
     :items="items"
     :can-load-more="canLoadMore"
     @load-more="loadMore"

@@ -37,14 +37,14 @@ loadCurrentPage()
 <template>
   <InfiniteList
     ref="infiniteList"
-    class="px-5 py-10 grid grid-cols-5 gap-x-5 gap-y-10"
+    class="px-5 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-5 gap-y-10"
     :items="items"
     :can-load-more="canLoadMore"
     @load-more="loadMore"
   >
     <template #item="{ item: movie }">
       <MovieCard
-        :id="4"
+        :id="movie.id"
         :poster_path="movie.poster_path"
         :title="movie.title"
       />

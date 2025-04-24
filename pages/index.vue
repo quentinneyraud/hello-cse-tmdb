@@ -10,7 +10,16 @@ definePageMeta({
 <template>
   <main>
     <div class="w-full py-10 pointer-events-none">
-      <UInput v-model="query" type="text" class="pointer-events-auto block w-1/2 mx-auto" size="xl" icon="i-lucide-search" placeholder="Chercher un film" color="neutral" variant="soft" />
+      <UInput
+        v-model="query"
+        type="text"
+        class="pointer-events-auto block w-1/2 mx-auto"
+        size="xl"
+        icon="i-lucide-search"
+        placeholder="Search..."
+        color="neutral"
+        variant="soft"
+      />
     </div>
 
     <MovieSearchResultsList v-if="query" :query="queryDebounced" />

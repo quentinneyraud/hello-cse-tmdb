@@ -28,7 +28,7 @@ function onCommentFormSubmit(event: FormSubmitEvent<CommentFormSchema>) {
 </script>
 
 <template>
-  <section class="container mx-auto px-10">
+  <section class="container mx-auto px-10 pb-20">
     <h2 class="text-5xl">
       Comments
     </h2>

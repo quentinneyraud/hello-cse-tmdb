@@ -16,8 +16,8 @@ const schema = z.object({
 export type CommentFormSchema = z.output<typeof schema>
 
 const state = reactive<Partial<CommentFormSchema>>({
-  name: 'quentin',
-  message: 'cdcdc',
+  name: '',
+  message: '',
   rating: 5,
 })
 </script>

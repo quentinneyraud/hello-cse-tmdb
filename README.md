@@ -58,6 +58,12 @@ Dans `/extends/tmdb/server`, on crée une route qui commence par `/api/**`, util
 
 Tous les composants relatif à l'UI.
 
+## Pistes d'améliorations possible
+
+- Pousser la logique du proxy API et créer les routes spécifiques à cette application qi ne renvoient que les données utiles, par exemple une route `/movie/<movie_id>` qui ne renvoie que le Director plutôt que tout le `cast`
+- Optimisation de l'affichage des images via l'attribut size
+- Mise en place de skeleton
+
 ## Links
 
 - [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction)

@@ -5,9 +5,10 @@ export default defineNuxtConfig({
   extends: [
     './extends/core-features/eslint',
     './extends/core-features/typescript',
-    './extends/core-features/image',
     './extends/core-features/vue-use',
+    './extends/core-features/pinia',
     './extends/tmdb',
     './extends/ui',
+    './extends/comments',
   ],
 })

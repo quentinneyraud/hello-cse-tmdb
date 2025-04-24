@@ -40,7 +40,7 @@ async function loadMore() {
   >
     <template #item="{ item: movie }">
       <MovieCard
-        :id="4"
+        :id="movie.id"
         :poster_path="movie.poster_path"
         :title="movie.title"
       />

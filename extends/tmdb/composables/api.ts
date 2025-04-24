@@ -15,7 +15,9 @@ function fetchTMDBApi<
 }
 
 type GetTrendingMoviesTimeWindow = 'day' | 'week'
-interface GetTrendingMoviesOptions {}
+interface GetTrendingMoviesOptions {
+  page?: number
+}
 export function getTrendingMovies(timeWindow: GetTrendingMoviesTimeWindow, options?: APIQueryParams<GetTrendingMoviesOptions, Movie>) {
   return fetchTMDBApi<PaginatedResponse<Movie>>(`/trending/movie/${timeWindow}`, {
     ...options,

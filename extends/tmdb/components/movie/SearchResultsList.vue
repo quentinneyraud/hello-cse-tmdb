@@ -10,7 +10,11 @@ const currentPage = ref(1)
 const canLoadMore = ref(false)
 
 async function loadCurrentPage() {
-  const { total_pages, results } = await searchMovie({ page: currentPage.value, query: props.query })
+  const { total_pages, results } = await searchMovie({
+    page: currentPage.value,
+    query: props.query,
+    pick: ['id', 'poster_path', 'title'],
+  })
 
   if (results && total_pages) {
     items.value.push(...results)

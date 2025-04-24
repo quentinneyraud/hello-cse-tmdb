@@ -6,7 +6,12 @@ const currentPage = ref(1)
 const canLoadMore = ref(false)
 
 // Initial data
-const { data, error } = await useAsyncData('trending', () => getTrendingMovies('week', { page: currentPage.value }))
+const { data, error } = await useAsyncData('trending', () => {
+  return getTrendingMovies('week', {
+    page: currentPage.value,
+    pick: ['id', 'poster_path', 'title'],
+  })
+})
 if (error.value) {
   throw new Error('404')
 }
